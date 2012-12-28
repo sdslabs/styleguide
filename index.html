@@ -1,39 +1,97 @@
 <html>
   <head>
     <title>Styleguide | SDSLabs</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/davis.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/davis.min.js"></script>
+
   </head>
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/">Styleguide</a>
-          <div class="nav-collapse" id="main-menu">
-            <ul class="nav" id="main-menu-left">
-              <li><a href="/html-css">HTML/CSS</a></li>
-              <li><a href="/javascript">JavaScript</a></li>
-              <li><a href="/php">PHP</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    
     <div class="container">
+
+      <header class="jumbotron subhead" id="overview">
+        <div class="row">
+          <div class="span2">
+            <img src="/assets/img/yoda.png">
+          </div>
+          <div class="span6">
+            <h1><a href="/">Styleguide</a></h1>
+            <p class="lead">This is where you should look if you're interested in how to write code for SDSLabs</p>
+          </div>
+          
+        </div>
+        <div id="custom-nav" class="subnav">
+          <ul class="nav nav-pills">
+            <li><a class="active" href="/">Overview</a></li>
+            <li><a href="/html-css">HTML/CSS</a></li>
+            <li><a href="/javascript">JavaScript</a></li>
+            <li><a href="/php">PHP</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <section id="content">
+        <div id="overview-div">
+          <br/>
+          <h2>Be Consistent.</h2>
+          <p>
+            If you're editing code, take a few minutes to look at the code
+            around you and determine its style.  If they use spaces around
+            all their arithmetic operators, you should too.  If their
+            comments have little boxes of hash marks around them, make your
+            comments have little boxes of hash marks around them too.
+          </p>
+          <br>
+          <p>
+            The point of having style guidelines is to have a common vocabulary
+            of coding so people can concentrate on what you're saying rather
+            than on how you're saying it.  We present global style rules here so
+            people know the vocabulary, but local style is also important.  If
+            code you add to a file looks drastically different from the existing
+            code around it, it throws readers out of their rhythm when they go to
+            read it.  Avoid this.
+          </p>
+        </div>
+      </section>
    
     </div>
     <script>
+
+      (function ($) {
+
+        var
+          $win = $(window),
+          $filter = $('.subnav');
+        $win.scroll(function(){     
+          if(!$filter.hasClass('fix-top') && $win.scrollTop() > 157){
+            $filter.addClass('fix-top');
+          } else if ($filter.hasClass('fix-top')  && $win.scrollTop() < 157){
+            $filter.removeClass("fix-top");
+          }
+        });
+
+      })(window.jQuery);
+
       app = Davis(function() {
+        this.get('/', function (req) {
+          $('#content').load('/guides/overview');
+          $('body').animate({scrollTop: 0},400);
+        });
         this.get('/html-css', function (req) {
-          
+          $('#content').load('/guides/html-css');
+          $('body').animate({scrollTop: 0},400);
         });
         this.get('/javascript', function (req) {
-          
+          $('#content').load('/guides/javascript');
+          $('body').animate({scrollTop: 0},400);
         });
         this.get('/php', function (req) {
-          alert('php');
+
         });
       });
       $(document).ready(function () {
