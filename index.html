@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Styleguide | SDSLabs</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/davis.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Styleguide</a>
+          <div class="nav-collapse" id="main-menu">
+            <ul class="nav" id="main-menu-left">
+              <li><a href="/html-css">HTML/CSS</a></li>
+              <li><a href="/javascript">JavaScript</a></li>
+              <li><a href="/php">PHP</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+   
+    </div>
+    <script>
+      app = Davis(function() {
+        this.get('/html-css', function (req) {
+          
+        });
+        this.get('/javascript', function (req) {
+          
+        });
+        this.get('/php', function (req) {
+          alert('php');
+        });
+      });
+      $(document).ready(function () {
+        app.start()
+      })
+    </script>
+  </body>
+</html>
