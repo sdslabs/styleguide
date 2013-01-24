@@ -21,3 +21,15 @@ h1 a:hover {
   text-decoration: none;
   color: #444;
 }
+
+code {
+  display: inline-block;
+}
+
+.bad-code, .good-code {
+  margin-bottom: 10px;
+}
+
+.good-code {
+  color: green;
+}

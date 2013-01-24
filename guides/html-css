@@ -1,115 +1,111 @@
-<br><CATEGORY title="General Style Rules">
-    <STYLEPOINT title="Protocol">
-      <SUMMARY>
-        Omit the protocol from embedded resources.
-      </SUMMARY>
-      <BODY>
-        <p>
-          Omit the protocol portion (<code>http:</code>,
-          <code>https:</code>) from URLs pointing to images and other
-          media files, style sheets, and scripts unless the respective
-          files are not available over both protocols.
-        </p>
-        <p>
-          Omitting the protocol&#8212;which makes the URL
-          relative&#8212;prevents mixed content issues and results in
-          minor file size savings.
-        </p>
-        <BAD_CODE_SNIPPET>
-          &lt;!-- Not recommended --&gt;
-          &lt;script src="http://www.google.com/js/gweb/analytics/autotrack.js"&gt;&lt;/script&gt;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
-          &lt;!-- Recommended --&gt;
-          &lt;script src="//www.google.com/js/gweb/analytics/autotrack.js"&gt;&lt;/script&gt;
-        </CODE_SNIPPET>
-        <BAD_CODE_SNIPPET>
-          /* Not recommended */
-          .example {
-            background: url(http://www.google.com/images/example);
-          }
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
-          /* Recommended */
-          .example {
-            background: url(//www.google.com/images/example);
-          }
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
+<div id="html-css-div">
+  <br/>
+  <h2>General Style Rules</h2>
+  <h3>Protocol</h3>
+  <blockquote>
+    Omit the protocol from embedded resources.
+  </blockquote>
+  <div class="section-description">
+    <p>
+      Omit the protocol portion (<code>http:</code>,
+      <code>https:</code>) from URLs pointing to images and other
+      media files, style sheets, and scripts unless the respective
+      files are not available over both protocols.
+    </p>
+    <p>
+      Omitting the protocol&#8212;which makes the URL
+      relative&#8212;prevents mixed content issues and results in
+      minor file size savings.
+    </p>
+    <code class="bad-code">
+      &lt;!-- Not recommended --&gt;
+      &lt;script src="http://www.google.com/js/gweb/analytics/autotrack.js"&gt;&lt;/script&gt;
+    </code>
+    <code class="good-code">
+      &lt;!-- Recommended --&gt;
+      &lt;script src="//www.google.com/js/gweb/analytics/autotrack.js"&gt;&lt;/script&gt;
+    </code>
+    <code class="bad-code">
+      /* Not recommended */
+      .example {
+        background: url(http://www.google.com/images/example);
+      }
+    </code>
+    <code class="good-code">
+      /* Recommended */
+      .example {
+        background: url(//www.google.com/images/example);
+      }
+    </code>
+  </div>
     
-  </CATEGORY>
 
-  <CATEGORY title="General Formatting Rules">
-    <STYLEPOINT title="Indentation">
-      <SUMMARY>
+  <h2>General Formatting Rules</h2>
+    <h3>Indentation</h3>
+      <blockquote>
         Indent by 2 spaces at a time.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Don&#8217;t use tabs or mix tabs and spaces for indentation.
         </p>
-        <CODE_SNIPPET>
+        <code class="good-code">
           &lt;ul&gt;
             &lt;li&gt;Fantastic
             &lt;li&gt;Great
           &lt;/ul&gt;
-        </CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           .example {
             color: blue;
           }
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Capitalization">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Capitalization</h3>
+      <blockquote>
         Use only lowercase.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           All code has to be lowercase: This applies to element names,
           attributes, attribute values (unless
           text/<code>CDATA</code>), selectors, properties, and
           property values (with the exception of strings).
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           &lt;A HREF="/"&gt;Home&lt;/A&gt;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           &lt;img src="google.png" alt="Google"&gt;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Trailing whitespace">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Trailing whitespace</h3>
+      <blockquote>
         Remove trailing white spaces.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Trailing white spaces are unnecessary and can complicate
           diffs.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           &lt;p&gt;What?_
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           &lt;p&gt;Yes please.
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-  </CATEGORY>
+        </code>
+      </div>
 
-  <CATEGORY title="General Meta Rules">
-    <STYLEPOINT title="Encoding">
-      <SUMMARY>
+  <h2>General Meta Rules</h2>
+    <h3>Encoding</h3>
+      <blockquote>
         Use UTF-8 (no BOM).
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Make sure your editor uses UTF-8 as character encoding,
           without a byte order mark.
@@ -124,13 +120,12 @@
           found in <a href="http://www.w3.org/International/tutorials/tutorial-char-enc/">Handling
           character encodings in HTML and CSS</a>.)
         </p>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Comments">
-      <SUMMARY>
+      </div>
+    <h3>Comments</h3>
+      <blockquote>
         Explain code as needed, where possible.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Use comments to explain code: What does it cover, what
           purpose does it serve, why is respective solution used or
@@ -142,13 +137,12 @@
           may vary heavily for HTML and CSS code and depends on the
           project&#8217;s complexity.)
         </p>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Action items">
-      <SUMMARY>
+      </div>
+    <h3>Action items</h3>
+      <blockquote>
         Mark todos and action items with <code>TODO</code>.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Highlight todos by using the keyword <code>TODO</code> only,
           not other common formats like <code>@@</code>.
@@ -162,28 +156,26 @@
           item</code>.
         </p>
         
-        <CODE_SNIPPET>
+        <code class="good-code">
           {# TODO(john.doe): revisit centering #}
           &lt;center&gt;Test&lt;/center&gt;
-        </CODE_SNIPPET>
+        </code>
         
-        <CODE_SNIPPET>
+        <code class="good-code">
           &lt;!-- TODO: remove optional tags --&gt;
           &lt;ul&gt;
             &lt;li&gt;Apples&lt;/li&gt;
             &lt;li&gt;Oranges&lt;/li&gt;
           &lt;/ul&gt;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-  </CATEGORY>
+        </code>
+      </div>
 
-  <CATEGORY title="HTML Style Rules">
-    <STYLEPOINT title="Document type">
-      <SUMMARY>
+  <h2>HTML Style Rules</h2>
+    <h3>Document type</h3>
+      <blockquote>
         Use HTML5.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           HTML5 (HTML syntax) is preferred for all HTML documents:
           <code>&lt;!DOCTYPE html&gt;</code>.
@@ -198,13 +190,12 @@
           Although fine with HTML, do not close void elements, i.e. write
           <code>&lt;br&gt;</code>, not <code>&lt;br /&gt;</code>.
         </p>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="HTML validity">
-      <SUMMARY>
+      </div>
+    <h3>HTML validity</h3>
+      <blockquote>
         Use valid HTML where possible.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Use valid HTML code unless that is not possible due to
           otherwise unattainable performance goals regarding file size.
@@ -220,25 +211,24 @@
           that contributes to learning about technical requirements
           and constraints, and that ensures proper HTML usage.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           &lt;title&gt;Test&lt;/title&gt;
           &lt;article&gt;This is only a test.
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           &lt;!DOCTYPE html&gt;
           &lt;meta charset="utf-8"&gt;
           &lt;title&gt;Test&lt;/title&gt;
           &lt;article&gt;This is only a test.&lt;/article&gt;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Semantics">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Semantics</h3>
+      <blockquote>
         Use HTML according to its purpose.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Use elements (sometimes incorrectly called &#8220;tags&#8221;) for what
           they have been created for. For example, use heading
@@ -250,21 +240,20 @@
           accessibility, reuse, and code efficiency reasons.
         </p>
         
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           &lt;div onclick="goToRecommendations();"&gt;All recommendations&lt;/div&gt;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           &lt;a href="recommendations/"&gt;All recommendations&lt;/a&gt;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Multimedia fallback">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Multimedia fallback</h3>
+      <blockquote>
         Provide alternative contents for multimedia.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           For multimedia, such as images, videos, animated objects via
           <code>canvas</code>, make sure to offer alternative
@@ -286,22 +275,21 @@
           alternative text, as in <code>alt=""</code>.)
         </p>
         
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           &lt;img src="spreadsheet.png"&gt;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           &lt;img src="spreadsheet.png" alt="Spreadsheet screenshot."&gt;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
+        </code>
+      </div>
 
-    <STYLEPOINT title="Separation of concerns">
-      <SUMMARY>
+    <h3>Separation of concerns</h3>
+      <blockquote>
         Separate structure from presentation from behavior.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Strictly keep structure (markup), presentation (styling),
           and behavior (scripting) apart, and try to keep the
@@ -325,7 +313,7 @@
           to update style sheets and scripts.
         </p>
         
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           &lt;!DOCTYPE html&gt;
           &lt;title&gt;HTML sucks&lt;/title&gt;
@@ -337,8 +325,8 @@
             &lt;u&gt;HTML is stupid!!1&lt;/u&gt;
           &lt;center&gt;I can&#8217;t believe there&#8217;s no way to control the styling of
             my website without doing everything all over again!&lt;/center&gt;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           &lt;!DOCTYPE html&gt;
           &lt;title&gt;My first CSS-only redesign&lt;/title&gt;
@@ -348,14 +336,13 @@
             doing it: separating concerns and avoiding anything in the HTML of
             my website that is presentational.
           &lt;p&gt;It&#8217;s awesome!
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Entity references">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Entity references</h3>
+      <blockquote>
         Do not use entity references.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           There is no need to use entity references like
           <code>&amp;mdash;</code>, <code>&amp;rdquo;</code>, or
@@ -369,21 +356,20 @@
           well as control or &#8220;invisible&#8221; characters (like no-break
           spaces).
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           The currency symbol for the Euro is &amp;ldquo;&amp;eur;&amp;rdquo;.
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           The currency symbol for the Euro is &#8220;&#8364;&#8221;.
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Optional tags">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Optional tags</h3>
+      <blockquote>
         Omit optional tags (optional).
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           For file size optimization and scannability purposes,
           consider omitting optional tags.
@@ -397,7 +383,7 @@
           consistency and simplicity reasons it&#8217;s best served
           omitting all optional tags, not just a selection.)
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           &lt;!DOCTYPE html&gt;
           &lt;html&gt;
@@ -408,20 +394,19 @@
               &lt;p&gt;Sic.&lt;/p&gt;
             &lt;/body&gt;
           &lt;/html&gt;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           &lt;!DOCTYPE html&gt;
           &lt;title&gt;Saving money, saving bytes&lt;/title&gt;
           &lt;p&gt;Qed.
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="type attributes">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>type attributes</h3>
+      <blockquote>
         Omit <code>type</code> attributes for style sheets and scripts.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Do not use <code>type</code> attributes for style sheets
           (unless not using CSS) and scripts (unless not using
@@ -435,35 +420,33 @@
           <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#attr-script-type"><code>text/javascript</code></a>
           as defaults. This can be safely done even for older browsers.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           &lt;link rel="stylesheet" href="//www.google.com/css/maia.css"
             type="text/css"&gt;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           &lt;link rel="stylesheet" href="//www.google.com/css/maia.css"&gt;
-        </CODE_SNIPPET>
-        <BAD_CODE_SNIPPET>
+        </code>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           &lt;script src="//www.google.com/js/gweb/analytics/autotrack.js"
             type="text/javascript"&gt;&lt;/script&gt;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           &lt;script src="//www.google.com/js/gweb/analytics/autotrack.js"&gt;&lt;/script&gt;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-  </CATEGORY>
+        </code>
+      </div>
 
-  <CATEGORY title="HTML Formatting Rules">
-    <STYLEPOINT title="General formatting">
-      <SUMMARY>
+  <h2>HTML Formatting Rules</h2>
+    <h3>General formatting</h3>
+      <blockquote>
         Use a new line for every block, list, or table element, and
         indent every such child element.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Independent of the styling of an element (as CSS allows
           elements to assume a different role per <code>display</code>
@@ -480,19 +463,19 @@
           line. A linter is encouraged to throw a warning instead of
           an error.)
         </p>
-        <CODE_SNIPPET>
+        <code class="good-code">
           &lt;blockquote&gt;
             &lt;p&gt;&lt;em&gt;Space&lt;/em&gt;, the final frontier.&lt;/p&gt;
           &lt;/blockquote&gt;
-        </CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;ul&gt;
             &lt;li&gt;Moe
             &lt;li&gt;Larry
             &lt;li&gt;Curly
           &lt;/ul&gt;
-        </CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;table&gt;
             &lt;thead&gt;
               &lt;tr&gt;
@@ -503,36 +486,33 @@
                 &lt;td&gt;$ 5.00
                 &lt;td&gt;$ 4.50
           &lt;/table&gt;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="HTML quotation marks">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>HTML quotation marks</h3>
+      <blockquote>
         When quoting attributes values, use double quotation marks.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Use double (<code>""</code>) rather than single quotation marks
           (<code>''</code>) around attribute values.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           &lt;!-- Not recommended --&gt;
           &lt;a class='maia-button maia-button-secondary'&gt;Sign in&lt;/a&gt;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           &lt;!-- Recommended --&gt;
           &lt;a class="maia-button maia-button-secondary"&gt;Sign in&lt;/a&gt;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-  </CATEGORY>
+        </code>
+      </div>
 
-  <CATEGORY title="CSS Style Rules">
-    <STYLEPOINT title="CSS validity">
-      <SUMMARY>
+  <h2>CSS Style Rules</h2>
+    <h3>CSS validity</h3>
+      <blockquote>
         Use valid CSS where possible.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Unless dealing with CSS validator bugs or requiring
           proprietary syntax, use valid CSS code.
@@ -548,13 +528,12 @@
           that allows to spot CSS code that may not have any effect
           and can be removed, and that ensures proper CSS usage.
         </p>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="ID and class naming">
-      <SUMMARY>
+      </div>
+    <h3>ID and class naming</h3>
+      <blockquote>
         Use meaningful or generic ID and class names.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Instead of presentational or cryptic names, always use ID
           and class names that reflect the purpose of the element in
@@ -574,15 +553,15 @@
           Using functional or generic names reduces the probability of
           unnecessary document or template changes.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           /* Not recommended: meaningless */
           #yee-1901 {}
 
           /* Not recommended: presentational */
           .button-green {}
           .clear {}
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           /* Recommended: specific */
           #gallery {}
           #login {}
@@ -591,15 +570,14 @@
           /* Recommended: generic */
           .aux {}
           .alt {}
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="ID and class name style">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>ID and class name style</h3>
+      <blockquote>
         Use ID and class names that are as short as possible but as long as
         necessary.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Try to convey what an ID or class is about while being as
           brief as possible.
@@ -608,24 +586,23 @@
           Using ID and class names this way contributes to acceptable
           levels of understandability and code efficiency.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           /* Not recommended */
           #navigation {}
           .atr {}
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           /* Recommended */
           #nav {}
           .author {}
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
+        </code>
+      </div>
 
-    <STYLEPOINT title="Type selectors">
-      <SUMMARY>
+    <h3>Type selectors</h3>
+      <blockquote>
         Avoid qualifying ID and class names with type selectors.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>Unless necessary (for example with helper classes), do not
           use element names in conjunction with IDs or classes.
         </p>
@@ -634,23 +611,22 @@
           <a href="http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/">performance
           reasons</a>.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           /* Not recommended */
           ul#example {}
           div.error {}
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           /* Recommended */
           #example {}
           .error {}
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Shorthand properties">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Shorthand properties</h3>
+      <blockquote>
         Use shorthand properties where possible.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           CSS offers a variety of
           <a href="http://www.w3.org/TR/CSS21/about.html#shorthand">shorthand</a>
@@ -662,7 +638,7 @@
           Using shorthand properties is useful for code efficiency and
           understandability.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           /* Not recommended */
           border-top-style: none;
           font-family: palatino, georgia, serif;
@@ -672,68 +648,64 @@
           padding-left: 1em;
           padding-right: 1em;
           padding-top: 0;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           /* Recommended */
           border-top: 0;
           font: 100%/1.6 palatino, georgia, serif;
           padding: 0 1em 2em;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="0 and units">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>0 and units</h3>
+      <blockquote>
         Omit unit specification after &#8220;0&#8221; values.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Do not use units after <code>0</code> values unless they are
           required.
         </p>
-        <CODE_SNIPPET>
+        <code class="good-code">
           margin: 0;
           padding: 0;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Leading 0s">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Leading 0s</h3>
+      <blockquote>
         Omit leading &#8220;0&#8221;s in values.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Do not use put <code>0</code>s in front of values or lengths
           between -1 and 1.
         </p>
-        <CODE_SNIPPET>
+        <code class="good-code">
           font-size: .8em;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Hexadecimal notation">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Hexadecimal notation</h3>
+      <blockquote>
         Use 3 character hexadecimal notation where possible.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           For color values that permit it, 3 character hexadecimal
           notation is shorter and more succinct.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           /* Not recommended */
           color: #eebbcc;
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           /* Recommended */
           color: #ebc;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Prefixes">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Prefixes</h3>
+      <blockquote>
         Prefix selectors with an application-specific prefix (optional).
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           In large projects as well as for code that gets embedded in
           other projects or on external sites use prefixes (as
@@ -747,42 +719,40 @@
           make maintenance easier, for example in search and replace
           operations.
         </p>
-        <CODE_SNIPPET>
+        <code class="good-code">
           .adw-help {} /* AdWords */
           #maia-note {} /* Maia */
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="ID and class name delimiters">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>ID and class name delimiters</h3>
+      <blockquote>
         Separate words in ID and class names by a hyphen.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Do not concatenate words and abbreviations in selectors by
           any characters (including none at all) other than hyphens,
           in order to improve understanding and scannability.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           /* Not recommended: does not separate the words &#8220;demo&#8221; and &#8220;image&#8221; */
           .demoimage {}
 
           /* Not recommended: uses underscore instead of hyphen */
           .error_status {}
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           /* Recommended */
           #video-id {}
           .ads-sample {}
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Hacks">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Hacks</h3>
+      <blockquote>
         Avoid user agent detection as well as CSS &#8220;hacks&#8221;&#8212;try a different
         approach first.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           It&#8217;s tempting to address styling differences over user
           agent detection or special CSS filters, workarounds, and
@@ -797,16 +767,14 @@
         </p>
         
         
-      </BODY>
-    </STYLEPOINT>
-  </CATEGORY>
+      </div>
 
-  <CATEGORY title="CSS Formatting Rules">
-    <STYLEPOINT title="Declaration order">
-      <SUMMARY>
+  <h2>CSS Formatting Rules</h2>
+    <h3>Declaration order</h3>
+      <blockquote>
         Alphabetize declarations.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Put declarations in alphabetical order in order to achieve
           consistent code in a way that is easy to remember and
@@ -817,7 +785,7 @@
           multiple vendor-specific prefixes for a certain CSS property should
           be kept sorted (e.g. -moz prefix comes before -webkit).
         </p>
-        <CODE_SNIPPET>
+        <code class="good-code">
           background: fuchsia;
           border: 1px solid;
           -moz-border-radius: 4px;
@@ -826,20 +794,19 @@
           color: black;
           text-align: center;
           text-indent: 2em;
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Block content indentation">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Block content indentation</h3>
+      <blockquote>
         Indent all block content.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Indent all <a href="http://www.w3.org/TR/CSS21/syndata.html#block">block
           content</a>, that is rules within rules as well as declarations, so to
           reflect hierarchy and improve understanding.
         </p>
-        <CODE_SNIPPET>
+        <code class="good-code">
           @media screen, projection {
 
             html {
@@ -848,72 +815,69 @@
             }
 
           }
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Declaration stops">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Declaration stops</h3>
+      <blockquote>
         Use a semicolon after every declaration.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           End every declaration with a semicolon for consistency and
           extensibility reasons.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           /* Not recommended */
           .test {
             display: block;
             height: 100px
           }
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           /* Recommended */
           .test {
             display: block;
             height: 100px;
           }
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Property name stops">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Property name stops</h3>
+      <blockquote>
         Use a space after a property name&#8217;s colon.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Always use a single space between property and value (but no
           space between property and colon) for consistency reasons.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           /* Not recommended */
           h3 {
             font-weight:bold;
           }
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           /* Recommended */
           h3 {
             font-weight: bold;
           }
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Selector and declaration separation">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Selector and declaration separation</h3>
+      <blockquote>
         Separate selectors and declarations by new lines.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Always start a new line for each selector and declaration.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           /* Not recommended */
           a:focus, a:active {
             position: relative; top: 1px;
           }
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           /* Recommended */
           h1,
           h2,
@@ -921,18 +885,17 @@
             font-weight: normal;
             line-height: 1.2;
           }
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="Rule separation">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>Rule separation</h3>
+      <blockquote>
         Separate rules by new lines.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Always put a line between rules.
         </p>
-        <CODE_SNIPPET>
+        <code class="good-code">
           html {
             background: #fff;
           }
@@ -941,14 +904,13 @@
             margin: auto;
             width: 50%;
           }
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-    <STYLEPOINT title="CSS quotation marks">
-      <SUMMARY>
+        </code>
+      </div>
+    <h3>CSS quotation marks</h3>
+      <blockquote>
         Use single quotation marks for attribute selectors and property values.
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           Use single (<code>''</code>) rather than double (<code>""</code>)
           quotation marks for attribute selectors or property values. Do not
@@ -959,38 +921,36 @@
           use double quotation marks&#8212;<a href="http://www.w3.org/TR/CSS21/syndata.html#charset">single
           quotation marks are not permitted</a>.
         </p>
-        <BAD_CODE_SNIPPET>
+        <code class="bad-code">
           /* Not recommended */
           @import url("//www.google.com/css/maia.css");
 
           html {
             font-family: "open sans", arial, sans-serif;
           }
-        </BAD_CODE_SNIPPET>
-        <CODE_SNIPPET>
+        </code>
+        <code class="good-code">
           /* Recommended */
           @import url(//www.google.com/css/maia.css);
 
           html {
             font-family: 'open sans', arial, sans-serif;
           }
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-  </CATEGORY>
+        </code>
+      </div>
 
-  <CATEGORY title="CSS Meta Rules">
+  <h2>CSS Meta Rules</h2>
     
-    <STYLEPOINT title="Section comments">
-      <SUMMARY>
+    <h3>Section comments</h3>
+      <blockquote>
         Group sections by a section comment (optional).
-      </SUMMARY>
-      <BODY>
+      </blockquote>
+      <div class="section-description">
         <p>
           If possible, group style sheet sections together by using
           comments. Separate sections with new lines.
         </p>
-        <CODE_SNIPPET>
+        <code class="good-code">
           /* Header */
 
           #adw-header {}
@@ -1002,7 +962,6 @@
           /* Gallery */
 
           .adw-gallery {}
-        </CODE_SNIPPET>
-      </BODY>
-    </STYLEPOINT>
-  </CATEGORY>
+        </code>
+      </div>
+</div>

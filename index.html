@@ -4,7 +4,7 @@
     
     <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" /> -->
     
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/davis.min.js"></script>
@@ -28,9 +28,9 @@
         <div id="custom-nav" class="subnav">
           <ul class="nav nav-pills">
             <li><a class="active" href="/">Overview</a></li>
-            <li><a href="/html-css">HTML/CSS</a></li>
-            <li><a href="/javascript">JavaScript</a></li>
-            <li><a href="/php">PHP</a></li>
+            <li><a href="/guides/html-css">HTML/CSS</a></li>
+            <li><a href="/guides/javascript">JavaScript</a></li>
+            <li><a href="/guides/php">PHP</a></li>
           </ul>
         </div>
       </header>
@@ -82,15 +82,15 @@
           $('#content').load('/guides/overview');
           $('body').animate({scrollTop: 0},400);
         });
-        this.get('/html-css', function (req) {
+        this.get('/guides/html-css', function (req) {
           $('#content').load('/guides/html-css');
           $('body').animate({scrollTop: 0},400);
         });
-        this.get('/javascript', function (req) {
+        this.get('/guides/javascript', function (req) {
           $('#content').load('/guides/javascript');
           $('body').animate({scrollTop: 0},400);
         });
-        this.get('/php', function (req) {
+        this.get('/guides/php', function (req) {
 
         });
       });
