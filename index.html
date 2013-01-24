@@ -2,12 +2,12 @@
   <head>
     <title>Styleguide | SDSLabs</title>
     
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" /> -->
     
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/davis.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/davis.min.js"></script>
 
   </head>
   <body>
@@ -17,20 +17,16 @@
       <header class="jumbotron subhead" id="overview">
         <div class="row">
           <div class="span2">
-            <img src="/assets/img/yoda.png">
+            <img src="assets/img/yoda.png">
           </div>
           <div class="span6">
-            <h1><a href="/">Styleguide</a></h1>
+            <h1><a href="/styleguide">Styleguide</a></h1>
             <p class="lead">This is where you should look if you're interested in how to write code for SDSLabs</p>
           </div>
           
         </div>
         <div id="custom-nav" class="subnav">
           <ul class="nav nav-pills">
-            <li><a class="active" href="/">Overview</a></li>
-            <li><a href="/guides/html-css">HTML/CSS</a></li>
-            <li><a href="/guides/javascript">JavaScript</a></li>
-            <li><a href="/guides/php">PHP</a></li>
           </ul>
         </div>
       </header>
@@ -62,6 +58,8 @@
     </div>
     <script>
 
+      window.root = location.origin+location.pathname;
+
       (function ($) {
 
         var
@@ -75,23 +73,24 @@
           }
         });
 
+        $('.nav.nav-pills').html('\
+          <li><a href="'+window.root+'">Overview</a></li>\
+          <li><a href="'+window.root+'guides/html-css">HTML/CSS</a></li>\
+          <li><a href="'+window.root+'guides/javascript">JavaScript</a></li>'
+        );
+
       })(window.jQuery);
 
-      app = Davis(function() {
-        this.get('/', function (req) {
-          $('#content').load('/guides/overview');
-          $('body').animate({scrollTop: 0},400);
-        });
-        this.get('/guides/html-css', function (req) {
-          $('#content').load('/guides/html-css');
-          $('body').animate({scrollTop: 0},400);
-        });
-        this.get('/guides/javascript', function (req) {
-          $('#content').load('/guides/javascript');
-          $('body').animate({scrollTop: 0},400);
-        });
-        this.get('/guides/php', function (req) {
 
+      app = Davis(function() {
+
+        this.get(location.pathname, function (req) {
+          $('#content').load(window.root+'guides/overview');
+          $('body').animate({scrollTop: 0},400);
+        });
+        this.get(location.pathname+'guides/:topic', function (req) {
+          $('#content').load(window.root+'guides/'+req.params['topic']);
+          $('body').animate({scrollTop: 0},400);
         });
       });
       $(document).ready(function () {
