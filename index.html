@@ -87,11 +87,11 @@
       app = Davis(function() {
 
         this.get(location.pathname, function (req) {
-          $('#content').load(window.root+'guides/overview');
+          $('#content').load(window.root+'guides/overview.html');
           $('body').animate({scrollTop: 0},400);
         });
         this.get(location.pathname+'guides/:topic', function (req) {
-          $('#content').load(window.root+'guides/'+req.params['topic']);
+          $('#content').load(window.root+'guides/'+req.params['topic']+'.html');
           $('body').animate({scrollTop: 0},400);
         });
       });
