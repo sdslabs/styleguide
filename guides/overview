@@ -1,6 +1,8 @@
 <div id="overview-div">
-  <br/>
-  <h2>Be Consistent.</h2>
+  <br>
+  <h2 id="heading">Overview</h2>
+  <br>
+  <h3>Be Consistent.</h3>
   <p>
     If you're editing code, take a few minutes to look at the code
     around you and determine its style.  If they use spaces around

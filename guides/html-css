@@ -1,7 +1,9 @@
+<br>
+<h2 id="heading">HTML/CSS</h2>
 <div id="html-css-div">
   <br/>
-  <h2>General Style Rules</h2>
-  <h3>Protocol</h3>
+  <h3>General Style Rules</h3>
+  <h4>Protocol</h4>
   <blockquote>
     Omit the protocol from embedded resources.
   </blockquote>
@@ -40,8 +42,8 @@
   </div>
     
 
-  <h2>General Formatting Rules</h2>
-    <h3>Indentation</h3>
+  <h3>General Formatting Rules</h3>
+    <h4>Indentation</h4>
       <blockquote>
         Indent by 2 spaces at a time.
       </blockquote>
@@ -61,7 +63,7 @@
           }
         </code>
       </div>
-    <h3>Capitalization</h3>
+    <h4>Capitalization</h4>
       <blockquote>
         Use only lowercase.
       </blockquote>
@@ -81,7 +83,7 @@
           &lt;img src="google.png" alt="Google"&gt;
         </code>
       </div>
-    <h3>Trailing whitespace</h3>
+    <h4>Trailing whitespace</h4>
       <blockquote>
         Remove trailing white spaces.
       </blockquote>
@@ -100,8 +102,8 @@
         </code>
       </div>
 
-  <h2>General Meta Rules</h2>
-    <h3>Encoding</h3>
+  <h3>General Meta Rules</h3>
+    <h4>Encoding</h4>
       <blockquote>
         Use UTF-8 (no BOM).
       </blockquote>
@@ -121,7 +123,7 @@
           character encodings in HTML and CSS</a>.)
         </p>
       </div>
-    <h3>Comments</h3>
+    <h4>Comments</h4>
       <blockquote>
         Explain code as needed, where possible.
       </blockquote>
@@ -138,7 +140,7 @@
           project&#8217;s complexity.)
         </p>
       </div>
-    <h3>Action items</h3>
+    <h4>Action items</h4>
       <blockquote>
         Mark todos and action items with <code>TODO</code>.
       </blockquote>
@@ -170,8 +172,8 @@
         </code>
       </div>
 
-  <h2>HTML Style Rules</h2>
-    <h3>Document type</h3>
+  <h3>HTML Style Rules</h3>
+    <h4>Document type</h4>
       <blockquote>
         Use HTML5.
       </blockquote>
@@ -191,7 +193,7 @@
           <code>&lt;br&gt;</code>, not <code>&lt;br /&gt;</code>.
         </p>
       </div>
-    <h3>HTML validity</h3>
+    <h4>HTML validity</h4>
       <blockquote>
         Use valid HTML where possible.
       </blockquote>
@@ -224,7 +226,7 @@
           &lt;article&gt;This is only a test.&lt;/article&gt;
         </code>
       </div>
-    <h3>Semantics</h3>
+    <h4>Semantics</h4>
       <blockquote>
         Use HTML according to its purpose.
       </blockquote>
@@ -249,7 +251,7 @@
           &lt;a href="recommendations/"&gt;All recommendations&lt;/a&gt;
         </code>
       </div>
-    <h3>Multimedia fallback</h3>
+    <h4>Multimedia fallback</h4>
       <blockquote>
         Provide alternative contents for multimedia.
       </blockquote>
@@ -285,7 +287,7 @@
         </code>
       </div>
 
-    <h3>Separation of concerns</h3>
+    <h4>Separation of concerns</h4>
       <blockquote>
         Separate structure from presentation from behavior.
       </blockquote>
@@ -338,7 +340,7 @@
           &lt;p&gt;It&#8217;s awesome!
         </code>
       </div>
-    <h3>Entity references</h3>
+    <h4>Entity references</h4>
       <blockquote>
         Do not use entity references.
       </blockquote>
@@ -365,7 +367,7 @@
           The currency symbol for the Euro is &#8220;&#8364;&#8221;.
         </code>
       </div>
-    <h3>Optional tags</h3>
+    <h4>Optional tags</h4>
       <blockquote>
         Omit optional tags (optional).
       </blockquote>
@@ -402,7 +404,7 @@
           &lt;p&gt;Qed.
         </code>
       </div>
-    <h3>type attributes</h3>
+    <h4>type attributes</h4>
       <blockquote>
         Omit <code>type</code> attributes for style sheets and scripts.
       </blockquote>
@@ -440,8 +442,8 @@
         </code>
       </div>
 
-  <h2>HTML Formatting Rules</h2>
-    <h3>General formatting</h3>
+  <h3>HTML Formatting Rules</h3>
+    <h4>General formatting</h4>
       <blockquote>
         Use a new line for every block, list, or table element, and
         indent every such child element.
@@ -488,7 +490,7 @@
           &lt;/table&gt;
         </code>
       </div>
-    <h3>HTML quotation marks</h3>
+    <h4>HTML quotation marks</h4>
       <blockquote>
         When quoting attributes values, use double quotation marks.
       </blockquote>
@@ -507,8 +509,8 @@
         </code>
       </div>
 
-  <h2>CSS Style Rules</h2>
-    <h3>CSS validity</h3>
+  <h3>CSS Style Rules</h3>
+    <h4>CSS validity</h4>
       <blockquote>
         Use valid CSS where possible.
       </blockquote>
@@ -529,7 +531,7 @@
           and can be removed, and that ensures proper CSS usage.
         </p>
       </div>
-    <h3>ID and class naming</h3>
+    <h4>ID and class naming</h4>
       <blockquote>
         Use meaningful or generic ID and class names.
       </blockquote>
@@ -572,7 +574,7 @@
           .alt {}
         </code>
       </div>
-    <h3>ID and class name style</h3>
+    <h4>ID and class name style</h4>
       <blockquote>
         Use ID and class names that are as short as possible but as long as
         necessary.
@@ -598,7 +600,7 @@
         </code>
       </div>
 
-    <h3>Type selectors</h3>
+    <h4>Type selectors</h4>
       <blockquote>
         Avoid qualifying ID and class names with type selectors.
       </blockquote>
@@ -622,7 +624,7 @@
           .error {}
         </code>
       </div>
-    <h3>Shorthand properties</h3>
+    <h4>Shorthand properties</h4>
       <blockquote>
         Use shorthand properties where possible.
       </blockquote>
@@ -656,7 +658,7 @@
           padding: 0 1em 2em;
         </code>
       </div>
-    <h3>0 and units</h3>
+    <h4>0 and units</h4>
       <blockquote>
         Omit unit specification after &#8220;0&#8221; values.
       </blockquote>
@@ -670,7 +672,7 @@
           padding: 0;
         </code>
       </div>
-    <h3>Leading 0s</h3>
+    <h4>Leading 0s</h4>
       <blockquote>
         Omit leading &#8220;0&#8221;s in values.
       </blockquote>
@@ -683,7 +685,7 @@
           font-size: .8em;
         </code>
       </div>
-    <h3>Hexadecimal notation</h3>
+    <h4>Hexadecimal notation</h4>
       <blockquote>
         Use 3 character hexadecimal notation where possible.
       </blockquote>
@@ -701,7 +703,7 @@
           color: #ebc;
         </code>
       </div>
-    <h3>Prefixes</h3>
+    <h4>Prefixes</h4>
       <blockquote>
         Prefix selectors with an application-specific prefix (optional).
       </blockquote>
@@ -724,7 +726,7 @@
           #maia-note {} /* Maia */
         </code>
       </div>
-    <h3>ID and class name delimiters</h3>
+    <h4>ID and class name delimiters</h4>
       <blockquote>
         Separate words in ID and class names by a hyphen.
       </blockquote>
@@ -747,7 +749,7 @@
           .ads-sample {}
         </code>
       </div>
-    <h3>Hacks</h3>
+    <h4>Hacks</h4>
       <blockquote>
         Avoid user agent detection as well as CSS &#8220;hacks&#8221;&#8212;try a different
         approach first.
@@ -769,8 +771,8 @@
         
       </div>
 
-  <h2>CSS Formatting Rules</h2>
-    <h3>Declaration order</h3>
+  <h3>CSS Formatting Rules</h3>
+    <h4>Declaration order</h4>
       <blockquote>
         Alphabetize declarations.
       </blockquote>
@@ -796,7 +798,7 @@
           text-indent: 2em;
         </code>
       </div>
-    <h3>Block content indentation</h3>
+    <h4>Block content indentation</h4>
       <blockquote>
         Indent all block content.
       </blockquote>
@@ -817,7 +819,7 @@
           }
         </code>
       </div>
-    <h3>Declaration stops</h3>
+    <h4>Declaration stops</h4>
       <blockquote>
         Use a semicolon after every declaration.
       </blockquote>
@@ -841,7 +843,7 @@
           }
         </code>
       </div>
-    <h3>Property name stops</h3>
+    <h4>Property name stops</h4>
       <blockquote>
         Use a space after a property name&#8217;s colon.
       </blockquote>
@@ -852,18 +854,18 @@
         </p>
         <code class="bad-code">
           /* Not recommended */
-          h3 {
+          h4 {
             font-weight:bold;
           }
         </code>
         <code class="good-code">
           /* Recommended */
-          h3 {
+          h4 {
             font-weight: bold;
           }
         </code>
       </div>
-    <h3>Selector and declaration separation</h3>
+    <h4>Selector and declaration separation</h4>
       <blockquote>
         Separate selectors and declarations by new lines.
       </blockquote>
@@ -880,14 +882,14 @@
         <code class="good-code">
           /* Recommended */
           h1,
-          h2,
-          h3 {
+          h3,
+          h4 {
             font-weight: normal;
             line-height: 1.2;
           }
         </code>
       </div>
-    <h3>Rule separation</h3>
+    <h4>Rule separation</h4>
       <blockquote>
         Separate rules by new lines.
       </blockquote>
@@ -906,7 +908,7 @@
           }
         </code>
       </div>
-    <h3>CSS quotation marks</h3>
+    <h4>CSS quotation marks</h4>
       <blockquote>
         Use single quotation marks for attribute selectors and property values.
       </blockquote>
@@ -939,9 +941,9 @@
         </code>
       </div>
 
-  <h2>CSS Meta Rules</h2>
+  <h3>CSS Meta Rules</h3>
     
-    <h3>Section comments</h3>
+    <h4>Section comments</h4>
       <blockquote>
         Group sections by a section comment (optional).
       </blockquote>
