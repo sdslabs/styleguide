@@ -1,6 +1,6 @@
 #Coding Styleguide
 
-![Yoda](http://abhshkdz.github.com/styleguide/assets/img/yoda.png)
+![Yoda](https://raw.github.com/sdslabs/styleguide/gh-pages/assets/img/yoda.png)
 
 ##Be Consistent.
 
