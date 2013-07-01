@@ -1,7 +1,6 @@
 #Coding Styleguide
 
-![Yoda](https://raw.github.com/sdslabs/styleguide/gh-pages/assets/img/yoda.png)
-
+![Yoda](http://i.imgur.com/SU9E2Di.png)
 ##Be Consistent.
 
 If you're editing code, take a few minutes to look at the code around you and determine its style. If they use spaces around all their arithmetic operators, you should too. If their comments have little boxes of hash marks around them, make your comments have little boxes of hash marks around them too.
