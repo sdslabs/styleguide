@@ -60,8 +60,9 @@
     </div>
     <script>
 
-      window.root = location.origin+location.pathname;
-
+      //window.root = location.origin+location.pathname;
+      window.root=location.origin+location.pathname;
+      window.root=window.root.replace("/index.html","");
       (function ($) {
 
         var
@@ -77,9 +78,9 @@
 
         $('.nav.nav-pills').html('\
           <li><a href="'+window.root+'">Overview</a></li>\
-          <li><a href="'+window.root+'guides/html">HTML</a></li>\
-          <li><a href="'+window.root+'guides/css">CSS</a></li>\
-          <li><a href="'+window.root+'guides/javascript">JavaScript</a></li>'
+          <li><a href="'+window.root+'/guides/html.html">HTML</a></li>\
+          <li><a href="'+window.root+'/guides/css.html">CSS</a></li>\
+          <li><a href="'+window.root+'/guides/javascript.html">JavaScript</a></li>'
         );
 
       })(window.jQuery);
